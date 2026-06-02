@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #C9A96E;
+  --color-gold-light: #E2C98A;
+  --color-gold-muted: #8C6E3F;
+  --color-dark: #0C0B09;
+  --color-dark-2: #141210;
+  --color-dark-3: #1C1A16;
+  --color-dark-4: #222018;
+  --color-ivory: #F7F3EC;
+  --color-ivory-2: #EDE7D9;
+  --color-muted: #7A756D;
+  --color-light: #B8B0A2;
+  --color-jade: #2D5E4E;
+  --color-jade-light: #3D7A64;
+  --color-border: rgba(201, 169, 110, 0.18);
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Jost', sans-serif;
+}
+
+html, #root {
+  scroll-behavior: smooth;
+}
+
+#root {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-dark);
+  color: var(--color-ivory);
+  font-weight: 300;
+  line-height: 1.7;
+  font-size: 15px;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-muted);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
+}
+
+/* Selection color */
+::selection {
+  background: rgba(201, 169, 110, 0.3);
+  color: var(--color-ivory);
+}
+
+/* Keyframe animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s ease both;
+}
+
+.animate-fade-up-delay-1 {
+  animation: fadeUp 0.8s 0.15s ease both;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fadeUp 0.8s 0.25s ease both;
+}
+
+.animate-fade-up-delay-3 {
+  animation: fadeUp 0.8s 0.3s ease both;
+}
+
+.animate-fade-up-delay-4 {
+  animation: fadeUp 0.8s 0.4s ease both;
+}
+
+.animate-fade-up-delay-5 {
+  animation: fadeUp 0.8s 0.5s ease both;
+}
+
+.animate-scroll-pulse {
+  animation: scrollPulse 2s infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease both;
+}
